@@ -8,11 +8,12 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = () => {
-  let string = 'this is my code challangee ';
-  let theEnd = appendTheEnd(string);
-  return theEnd;
-};
+const appendTheEnd = (str) => {
+  // let string = 'this is my code challangee ';
+  // let theEnd = appendTheEnd(string);
+  // return theEnd;
+  var theEnd = str.concat(' The end.');
+  return theEnd;};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -26,8 +27,9 @@ appendFirstToLast(a);
 console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
-const appendFirstToLast = () => {
-  let newArr = [ 1 ,2 ,3];
+const appendFirstToLast = (arr) => {
+  let newArr = [];
+  arr.push(newArr);
   appendFirstToLast(newArr);
 };
 
@@ -47,7 +49,9 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  // eslint-disable-next-line no-undef
+  barithYearObj = {};
+  addBirthYearProperty(obj , year);
 };
 
 /* ------------------------------------------------------------------------------------------------
