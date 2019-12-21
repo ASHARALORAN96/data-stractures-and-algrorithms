@@ -15,7 +15,7 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   // Solution code here...
-    let result = str.slice(0,index);
+    let result = str.forEach.slice(0,1);
     return result;
   }
 };
@@ -125,7 +125,9 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
+  let remove = arr.join();
   // Solution code here...
+  return remove;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,6 +147,12 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  for (let i = 0; i < str.length; i++) {
+    if (numberOfCharacters > str.length) {
+      let string = " " ;
+      return string;
+    }
+  }
 };
 
 
