@@ -15,9 +15,12 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   // Solution code here...
-    let result = str.forEach.slice(0,1);
-    return result;
+  let arrayP = [];
+  for (let i = 0; i <= arrayP.length; i++) {
+    let result = str.slice(i);
+    arrayP.push(result);
   }
+  return arrayP;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,9 +77,16 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let arr = [];
+  recipe.ingredients.forEach(element => {
+
+    let first = element.split(' ');
+    let second = first.slice(2, first.length);
+
+    let itemName = second.join(' ');
+    arr.push(itemName);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
