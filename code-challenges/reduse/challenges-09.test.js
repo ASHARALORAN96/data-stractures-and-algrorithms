@@ -10,7 +10,6 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  arr = [];
 let counter = arr.reduce(function (accumulater ,value) {
     accumulater = accumulater + value;
     return accumulater;
@@ -75,7 +74,6 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  arr = [];
 let returenN = arr.reduce((accumulater ,objactName)=>{
  accumulater[objactName.name] = objactName.name;
  return accumulater;
