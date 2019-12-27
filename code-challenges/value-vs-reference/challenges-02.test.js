@@ -28,9 +28,8 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  let newArr = [];
+  let newArr = arr[0];
   arr.push(newArr);
-  appendFirstToLast(newArr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,8 +49,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // eslint-disable-next-line no-undef
-  barithYearObj = {};
-  addBirthYearProperty(obj , year);
+  obj.yearBorn = year;
 };
 
 /* ------------------------------------------------------------------------------------------------
