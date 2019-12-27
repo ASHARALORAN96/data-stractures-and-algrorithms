@@ -43,7 +43,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  const alphabetize = arr.sort((a , b) =>
+  return arr.sort((a , b) =>
     a.toUpperCase() > b.toUpperCase());
 };
 /* ------------------------------------------------------------------------------------------------
@@ -61,6 +61,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  return arr.sort((a,b) => a.price > b.price);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,6 +74,9 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  // return arr.sort((a,b) => a.length - b.length );
+  // String from google 
+  return arr.sort((a,b)=> String(a).length > String(b).length); 
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -95,6 +99,7 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+ return arr.sort((a,b) => a.lastName > b.lastName);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,6 +114,23 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  // arr.sort((a,b) =>{
+  //   if(a.lastName === b.lastName){
+  //     return a.firstName < b.firstName;
+  //   }else if(a.lastName === b.lastName){
+  //     return a.lastName > b.lastName;
+  //   }
+  // });
+  // Solution code here...
+  arr.sort((a,b) =>{
+    if(a.lastName === b.lastName){
+      if (a.firstName === b.firstName) {
+        return b.age > a.age;
+      }
+    }else {
+      return a.firstName < b.firstName;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
