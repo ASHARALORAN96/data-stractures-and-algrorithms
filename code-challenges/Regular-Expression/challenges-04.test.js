@@ -52,6 +52,9 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  // help from google
+  const monthm = /^[Oo]ct(ober)?$/;
+  return monthm.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,6 +68,9 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
+  let word = /\w+\s/g;
+  let strSpace = str.match(word);
+  return strSpace;
   // Solution code here...
 };
 
@@ -97,6 +103,10 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
+  // help from google 
+  let shell = /\b([A-Za-z]*ells)/g;
+
+  return str.match(shell);
   // Solution code here...
 };
 
