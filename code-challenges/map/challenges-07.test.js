@@ -11,7 +11,18 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+  let secandArr = [];
+  // function loop(n) {
+  // for (let i = 0; i < arr.length; i++) {
+  //   let value = n ^ n ;
+  //   secandArr.push(value);
+  // }}
+  // loop();
+  for (let i = 0; i < arr.length; i++) {
+    let value = Math.pow(2,arr[i]);
+    secandArr.push(value);
+  }
+ return secandArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,7 +32,13 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
+  let secandArr = [];
   // Solution code here...
+  arr.forEach( (number) =>{
+  let value = Math.pow(2,number);
+    secandArr.push(value);
+  });
+  return secandArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,6 +48,11 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
+  let valueByUsingMAp = arr.map((num) =>{
+    let value = Math.pow(2,num);
+    return value;
+  });
+  return valueByUsingMAp;
   // Solution code here...
 };
 
@@ -45,6 +67,10 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
+  let code = arr.map((string) =>{
+    return string.charCodeAt();
+  });
+  return code;
   // Solution code here...
 };
 
@@ -60,6 +86,18 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  let event = arr.map((data) =>{
+    if(data % 2 === 0){
+      return data = 'even';
+    }
+    // eslint-disable-next-line no-undef
+    else if (typeOf(data) === 'string' ) {
+      return data = 'N/A' ;
+    } else{
+      return data = 'odd' ;
+    }
+  });
+  return event;
 };
 
 /* ------------------------------------------------------------------------------------------------
