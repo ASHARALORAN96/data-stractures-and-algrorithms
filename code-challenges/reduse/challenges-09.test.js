@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,14 +74,15 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-let returenN = arr.reduce((accumulater ,objactName ,idx)=>{
+let returenN = arr.reduce((accumulater ,objactName)=>{
  accumulater[objactName.name] = objactName.name;
  return accumulater;
 },[]);
   // Solution code here...
 return returenN;
 };
-returnNames();
+// eslint-disable-next-line no-undef
+returnNames(arr);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -98,7 +100,8 @@ const reversedString = (str) => {
   return reversestring;
   // Solution code here...
 };
-reversedString();
+
+reversedString(str);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
