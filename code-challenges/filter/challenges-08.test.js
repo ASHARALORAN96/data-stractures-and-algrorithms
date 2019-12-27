@@ -46,6 +46,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
+  let firstArr = arr.filter((value) =>{
+    // if (!(arr.includes(value))) {
+    //   return value;
+    return !forbiddenValues.includes(value);
+  });
+  return firstArr;
   // Solution code here...
 };
 
@@ -89,8 +95,16 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
+   let getNumber = arr.filter((number)=>{
+     if (number.baseStat > minBaseStat) {
+       return number;
+     }
+    });
+    return getNumber;
+     
+   };
   // Solution code here...
-};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
