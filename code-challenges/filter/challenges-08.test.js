@@ -9,8 +9,13 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+let values = arr.filter((number)=>{
+  return (number % 2 !== 0);
+});
+return values;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,9 +27,13 @@ The callback function to filter should include or utilize a regular expression p
 For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 'hound'].
 ------------------------------------------------------------------------------------------------ */
 
-
+// vowels = a ,,e , u , i , o ,y
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+ let vowelsString = arr.filter((string)=>{
+   if(arr.includ(string) === 'a' || arr.includ(string) === 'e' || arr.includ(string) === 'u' || arr.includ(string) === 'o' || arr.includ(string) === 'i' || arr.includ(string) === 'y' )
+    return string;
+  });
+  return vowelsString;
 };
 
 
@@ -146,6 +155,15 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+
+  let characters = arr.filter((childs) =>
+    {
+      if (! childs.children)
+      {
+        return childs;
+      }
+    });
+    return characters;
 };
 
 /* ------------------------------------------------------------------------------------------------
