@@ -15,8 +15,7 @@ let counter = arr.reduce(function (accumulater ,value) {
     return accumulater;
   },0);
   return counter;
-};
-countNumberOfElements();
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -75,14 +74,15 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
 let returenN = arr.reduce((accumulater ,objactName)=>{
- accumulater[objactName.name] = objactName.name;
+//  accumulater[objactName.name] = objactName.name;
+accumulater.push(objactName.name);
  return accumulater;
 },[]);
-  // Solution code here...
+//   // Solution code here...
 return returenN;
 };
 // eslint-disable-next-line no-undef
-returnNames();
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -100,8 +100,6 @@ const reversedString = (str) => {
   return reversestring;
   // Solution code here...
 };
-
-reversedString();
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -153,7 +151,16 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
+  const childNum = arr.reduce((acc, num) => {
+    if(num.children){
+      return acc + num.children.length;
+    }
+    else {
+      return acc;
+    }
+  }, 0);
   // Solution code here...
+  return childNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
