@@ -35,10 +35,10 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 const totalSum = (input) => {
   // Solution code here...
   for (let i = 0; i < input.length; i++) {
-      input.reduce((acc , number)=>{
+      input[i].reduce((acc , number)=>{
        acc = acc + number;
-       return acc ;
-      } , 0)
+    } , 0)
+    return acc ;
   }
 };
 
