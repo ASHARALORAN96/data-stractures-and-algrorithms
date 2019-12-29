@@ -13,6 +13,13 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let target = [];
+  for (let i = 0; i < input.length; i++) {
+      input[i].reduce( (acc , number) =>{
+          let count = acc + number
+        target.push(count);
+    }, 0);
+    return target.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,6 +34,12 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  for (let i = 0; i < input.length; i++) {
+      input.reduce((acc , number)=>{
+       acc = acc + number;
+       return acc ;
+      } , 0)
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
