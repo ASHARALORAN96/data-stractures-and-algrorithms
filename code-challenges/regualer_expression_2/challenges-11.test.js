@@ -38,6 +38,14 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  // \w contain word 
+  // use this webside https://stackoverflow.com/questions/5342375/regex-email-validation
+  // *  Greedy (keep going!)
+  // the first domin /^\w+([\.-]?\w+)
+  //  the secand domin \w+([\.-]?\w+) 
+  // after the dot (\.\w{2,3} 
+  let emilValide =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+  return emilValide.test(email)? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
