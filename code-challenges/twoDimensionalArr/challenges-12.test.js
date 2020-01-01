@@ -30,7 +30,7 @@ const grandTotal = (stores) => {
     let columValues = 0;
   for (let i = 0; i < stores.length; i++) {
        let value = stores[i][x];
-       columValues = columValues + value;
+       columValues += value;
      
    }
    arrOfSalesParHour.push(columValues);
@@ -169,8 +169,17 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
-};
-
+  let splittedStr =str.split('\n');
+  let output = splittedStr.map( items =>{
+    let splittedItems = items.split(',');
+    let total = splittedItems.reduce((sum , val , index)=>{
+      sum += parseInt(val);
+      return sum;
+    } , 0);
+    return total;
+  });
+  return output;
+}
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
