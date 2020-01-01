@@ -24,12 +24,13 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  // let columValues = new Array(stores.length).fill(0);
   let arrOfSalesParHour =[];
   for (let x = 0; x < stores[0].length; x++) {
     let columValues = 0;
   for (let i = 0; i < stores.length; i++) {
        let value = stores[i][x];
-       columValues += value;
+       columValues = columValues + value;
      
    }
    arrOfSalesParHour.push(columValues);
@@ -49,8 +50,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
-};
-
+  let arrOfSalesParHour =[];
+    data.forEach( (values , index) => {
+      // let outputValue =data.value ;
+      // columValues += outputValue;
+      arrOfSalesParHour.push({sales: `${values} cookies` , time: hours[index]} );
+    });
+      return arrOfSalesParHour;
+  }
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
