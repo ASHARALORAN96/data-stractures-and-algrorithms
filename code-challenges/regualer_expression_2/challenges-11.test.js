@@ -10,8 +10,14 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
-  let pinDigitNum =/[0-4]\b/g;
-  return pinDigitNum.test(pin);
+  // let pinDigitNum =/[0-4]\b/g; // try one 
+  let pinDigitNum =/^[0-9]{4}$/g;
+  // $ end of string 
+  // ^ begging of string 
+  // g global 
+  //[0-9] all number 
+  // {4} Exactly 4 occurrences of character // from google
+  return pinDigitNum.test(pin)? true :  false ;
 };
 
 /* ------------------------------------------------------------------------------------------------
