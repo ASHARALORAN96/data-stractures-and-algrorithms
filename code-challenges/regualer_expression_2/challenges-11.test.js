@@ -10,6 +10,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+  let pinDigitNum =/[0-4]\b/g;
+  return pinDigitNum.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
