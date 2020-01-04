@@ -13,15 +13,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  let target = [];
+  let target = []
   for (let i = 0; i < input.length; i++) {
       input[i].reduce( (acc , number) =>{
-          let count = acc + number
+          let count = acc + number;
+          return count;
+        }, 0);
         target.push(count);
-    }, 0);
     return target.length;
 };
-
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -34,12 +35,16 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let total = [];
+  let totalSumation = 0;
   for (let i = 0; i < input.length; i++) {
       input[i].reduce((acc , number)=>{
-       acc = acc + number;
-    } , 0)
-    return acc ;
-  }
+      let acc =+ number;
+       total.push(acc); 
+    } , 0);
+  } 
+  total.map( value => totalSumation += value);
+  return totalSumation;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +60,18 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
+  // input.forEach( value =>{
+  //   if (value !== value % 5 || typeOf (value) !== 0 ) {
+  //     input.pop(value);
+  //   }
+  // })
+  let arr = []
+  input.forEach( val =>{
+   let num = val.filter( value =>{ value/5 && Number.isInteger(value)
+   return num
+  })
+  arr.push(num);
+  })
   // Solution code here...
 };
 
