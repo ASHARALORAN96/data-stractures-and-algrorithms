@@ -13,7 +13,6 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  let target = []
   for (let i = 0; i < input.length; i++) {
       input[i].reduce( (acc , number) =>{
           let count = acc + number;
@@ -39,8 +38,8 @@ const totalSum = (input) => {
   let totalSumation = 0;
   for (let i = 0; i < input.length; i++) {
       input[i].reduce((acc , number)=>{
-      let acc =+ number;
-       total.push(acc); 
+      let count = acc + number;
+      total.push(count); 
     } , 0);
   } 
   total.map( value => totalSumation += value);
@@ -59,21 +58,30 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
+// const divisibleByFiveTwoToThePower = (input) => {
   // input.forEach( value =>{
-  //   if (value !== value % 5 || typeOf (value) !== 0 ) {
+  //   if (value == value % 5 || typeof (value) === 'number' ) {
   //     input.pop(value);
   //   }
   // })
-  let arr = []
-  input.forEach( val =>{
-   let num = val.filter( value =>{ value/5 && Number.isInteger(value)
-   return num
-  })
-  arr.push(num);
-  })
+//   let arr = []
+//   input.map( val =>{
+//    let num = val.filter( value =>{ (value % 5 && typeof value === 'number');
+   
+//   })
+//   return num;
+// })
+// arr.push(num);
   // Solution code here...
-};
+// };
+const divisibleByFiveTwoToThePower = (input) => {
+   let result = input.map( array =>{
+   let arr= array.filter( (val) =>
+    (typeof val === 'number' && val%5 === 0)).map( item =>Math.pow(2,item))
+    return arr;
+    })
+    return result
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
