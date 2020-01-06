@@ -30,7 +30,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 // vowels = a ,,e , u , i , o ,y
 const filterStringsWithVowels = (arr) => {
  let vowelsString = arr.filter((string)=>{
-   if(arr.includ(string) === 'a' || arr.includ(string) === 'e' || arr.includ(string) === 'u' || arr.includ(string) === 'o' || arr.includ(string) === 'i' || arr.includ(string) === 'y' )
+   if(arr.includes(string) === 'a' || arr.includes(string) === 'e' || arr.includes(string) === 'u' || arr.includes(string) === 'o' || arr.includes(string) === 'i' || arr.includes(string) === 'y' )
     return string;
   });
   return vowelsString;
