@@ -11,11 +11,11 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 const toTitleCase = (arr) => {
   // Solution code here...
     arr.forEach(element => {
-        let third = element.charAt(0).toUpperCase() + element.substr(1);
-        array.push(third);
+        let upperCaseString = element.charAt(0).toUpperCase() ;
+        arr.push(upperCaseString);
       });
     
-      return array;
+      return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +123,7 @@ const sortBy = (property, arr) => {
     }
   });
 
-  return arr2;
+  return arrTwo;
 };
 
 /* ------------------------------------------------------------------------------------------------
